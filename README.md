@@ -16,17 +16,17 @@ It allows users to manage library items such as books, DVDs, and games, as well 
 
 Features:
 
-\- Add, remove, and update library items,Book, DVD, Game
+* Add, remove, and update library items,Book, DVD, Game
 
-\- Add, remove, and update members
+* Add, remove, and update members
 
-\- Issue items to members
+* Issue items to members
 
-\- Return items
+* Return items
 
-\- Display all items and members
+* Display all items and members
 
-\- Error handling for invalid operations
+* Error handling for invalid operations
 
 
 
@@ -38,15 +38,15 @@ The project is divided into multiple files:
 
 
 
-\- library.py Handles library functions
+* library.py Handles library functions
 
-\- libraryitems.py Contains LibraryItem, Book, DVD, Game classes
+* libraryitems.py Contains LibraryItem, Book, DVD, Game classes
 
-\- members.py Contains Member class
+* members.py Contains Member class
 
-\- main.py Runs the program
+* main.py Runs the program
 
-\- test\_library.py Contains pytest
+* test\_library.py Contains pytest
 
 
 
@@ -60,7 +60,7 @@ Design:
 * polymorphism is used by having the same method Display\_info() in different classes.
 Each class uses this method in its own way. So the program can use the same function name but get different results depending on the item.
 * the system seperates classes and methods for functionallity 
-
+* menu interface so it's easy to interact with
 
 
 
