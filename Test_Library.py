@@ -69,14 +69,13 @@ def test_issue_no_copies():
 
     library.issue_item(1, 101)
 
-    # copies should stay 0
     assert library.items[1].copies == 0
 
 
 def test_return_not_borrowed():
     library = Library()
 
-    library.add_item(Book(1, "The Anarchist cookbook", "William Powell", 2))
+    library.add_item(Book(1, "The Anarchist cookbook", "William Pp13owell", 2))
     library.add_member(101, "Tom")
 
     with pytest.raises(ValueError):

@@ -8,6 +8,7 @@ class Library:
         self.members = {} #dictionaries
 
     # Add a new item
+    # error handling item_id already exists
     def add_item(self, item):
         if item.item_id in self.items:
             print("Item ID already exists")
@@ -16,6 +17,7 @@ class Library:
             print("Item added successfully")
 
     # Remove an item
+    # error handling item_id doesn't exists
     def remove_item(self, item_id):
         if item_id in self.items:
             del self.items[item_id]
@@ -24,6 +26,7 @@ class Library:
             print("Item not found")
 
     # Update an item
+    # error handling item_id doesn't exists
     def update_item(self, item_id, title=None, copies=None, author=None, director=None, platform=None):
         if item_id not in self.items:
             print("Item not found")
@@ -46,6 +49,7 @@ class Library:
         print("Item updated successfully")
 
     # Show all items
+    # error handling there is no items
     def display_items(self):
         if not self.items:
             print("No items in the library")
@@ -54,6 +58,7 @@ class Library:
                 print(item.display_info())
 
     # Add a new member
+    # error handling member_id exists
     def add_member(self, member_id, name):
         if member_id in self.members:
             print("Member ID already exists")
@@ -62,6 +67,7 @@ class Library:
             print("Member added successfully")
 
     # Remove a member 
+    # error handling member_id doesn't exists
     def remove_member(self, member_id):
         if member_id in self.members:
             del self.members[member_id]
@@ -70,6 +76,7 @@ class Library:
             print("Member not found")
 
     # Update member
+    # error handling member_id doesn't exists
     def update_member(self, member_id, name=None):
         if member_id not in self.members:
             print("Member not found")
@@ -81,6 +88,7 @@ class Library:
         print("Member updated successfully")
 
     # Show all members
+    # error handling no member_id exists
     def display_members(self):
         if not self.members:
             print("No members in the library")
@@ -89,6 +97,7 @@ class Library:
                 print(member.display_info())
 
     # Issue an item
+    # with error handling wrong/no item_id, member_id or no copies 
     def issue_item(self, item_id, member_id):
         if item_id not in self.items:
             print("Item not found")
@@ -109,7 +118,8 @@ class Library:
         member.borrow_item(item_id)
         print(f"{item.title} issued to {member.name}")
 
-    # Return an item from a member
+    # Return an item
+    # error handling wrong item_id or member_id
     def return_item(self, item_id, member_id):
         if item_id not in self.items:
             print("Item not found")
