@@ -57,7 +57,7 @@ Design:
 * Dictionares are used to store items and members using IDs 
 * Lists are used to store borrowed items for each member
 * Inheritence is used with a base class libraryitems and subclasses such as book, dvd and game
-* polymorphism is used by having the same method Display\_info() in different classes.
+* polymorphism is used by having the same method Display_info() in different classes.
 Each class uses this method in its own way. So the program can use the same function name but get different results depending on the item.
 * the system seperates classes and methods for functionallity 
 * menu interface so it's easy to interact with

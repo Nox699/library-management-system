@@ -1,12 +1,15 @@
-class LibraryItem:
+# Parent class
+class LibraryItem: 
     def __init__(self, item_id, title, copies):
         self.item_id = item_id
         self.title = title
         self.copies = copies
 
-    def display_info(self):
+    def display_info(self): # polymorphism
         return f"Item ID: {self.item_id}, Title: {self.title}, Copies: {self.copies}"
 
+# Book, DVD, and Game inherit from LibraryItem
+# They reuse attributes like id, title, and copies
 
 # Book subclass
 class Book(LibraryItem):
@@ -14,7 +17,7 @@ class Book(LibraryItem):
         super().__init__(item_id, title, copies)
         self.author = author
 
-    def display_info(self):
+    def display_info(self): # polymorphism
         return f"Book ID: {self.item_id}, Title: {self.title}, Author: {self.author}, Copies: {self.copies}"
 
 
@@ -24,7 +27,7 @@ class DVD(LibraryItem):
         super().__init__(item_id, title, copies)
         self.director = director
 
-    def display_info(self):
+    def display_info(self): # polymorphism
         return f"DVD ID: {self.item_id}, Title: {self.title}, Director: {self.director}, Copies: {self.copies}"
 
 
@@ -34,5 +37,5 @@ class Game(LibraryItem):
         super().__init__(item_id, title, copies)
         self.platform = platform
 
-    def display_info(self):
+    def display_info(self): # polymorphism
         return f"Game ID: {self.item_id}, Title: {self.title}, Platform: {self.platform}, Copies: {self.copies}"
